@@ -17,7 +17,9 @@ namespace DesignPatterns
             VechterPrototype ninjakopie = ninja;
             VechterPrototype samuraikopie = samurai;
 
-            //ninja aanpassen != ninjakloon aanpassen
+            //ninja aanpassen != ninjakloon aanpassen, omdat klonen NIEUWE objecten zijn
+            //ik moet de échte objecten klonen, NIET de referenties:
+            //https://github.com/damirkusar/C-Sharp-Design-Patterns/blob/d9755222555530472aeb442e5bd053252c8e43c0/Creational/Prototype/FighterPrototype.cs#L20
             VechterPrototype ninjakloon = ninja.Klonen();
             VechterPrototype samuraikloon = samurai.Klonen();
 
